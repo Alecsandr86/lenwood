@@ -64,7 +64,13 @@ gulp.task('bower', function(){
   // jquery
   gulp.src('./bower_components/jquery/jquery.min.js')
       .pipe(gulp.dest(path.build.bower_js));
-      //
+  // responsive-menu
+  gulp.src('./bower_components/jquery-responsive-menu/dist/js/*.*')
+  .pipe(gulp.dest('src/js/responsive-menu/'))
+  .pipe(gulp.dest('build/js/responsive-menu/'))
+  gulp.src('./bower_components/jquery-responsive-menu/dist/css/*.*')
+  .pipe(gulp.dest('src/js/responsive-menu/'))
+  .pipe(gulp.dest('build/js/responsive-menu/'));
 
 
 });
@@ -131,7 +137,7 @@ gulp.task('sprite', function () {
     var spriteData = gulp.src('./src/images/sprite/*.*').pipe(spritesmith({
         algorithm: "top-down",
         imgName: 'sprite.png',
-        cssName: 'sprite.css',
+        cssName: 'sprite.scss',
         algorithmOpts: {sort: false},
         padding: 5,
         imgPath: '../images/sprite.png',
@@ -168,7 +174,7 @@ gulp.task('build', [
 
 
 gulp.task('watch', function(){
-    watch('src/typography.html', function(event, cb) {
+    watch('src/**/*.html', function(event, cb) {
         gulp.start('html:build');
     });
     watch([path.watch.style], function(event, cb) {
