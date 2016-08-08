@@ -71,6 +71,13 @@ gulp.task('bower', function(){
   gulp.src('./bower_components/jquery-responsive-menu/dist/css/*.*')
   .pipe(gulp.dest('src/js/responsive-menu/'))
   .pipe(gulp.dest('build/js/responsive-menu/'));
+  // form-styler
+  gulp.src('./bower_components/jquery-form-styler/*.css')
+      .pipe(gulp.dest('src/js/jquery-form-styler/'))
+      .pipe(gulp.dest('build/js/jquery-form-styler/'));
+      gulp.src('./bower_components/jquery-form-styler/*.js')
+          .pipe(gulp.dest('src/js/jquery-form-styler/'))
+          .pipe(gulp.dest('build/js/jquery-form-styler/'));
 
 
 });

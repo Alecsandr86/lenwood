@@ -10,6 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" href="js/jquery-form-styler/jquery.formstyler.css">
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -26,6 +27,10 @@
     <div class="nav-bg">
       <div class="container">
         <div class="row">
+          <div class="btn-mob-menu js-top-menu hidden-lg-up">
+            <a class="top-menu-mob" href="javascript: void(0);"></a>
+          </div>
+
           <ul class="nav-top">
             <li class="nav-top__item">
               <a class="nav-top__link" href="javascript: void(0);">О компании</a>
@@ -37,7 +42,7 @@
               <a class="nav-top__link" href="javascript: void(0);">Цены</a>
             </li>
             <li class="nav-top__item">
-              <a class="nav-top__link" href="javascript: void(0);">Новости</a>
+              <a class="nav-top__link nav-top__link-active" href="javascript: void(0);">Новости</a>
             </li>
             <li class="nav-top__item">
               <a class="nav-top__link" href="javascript: void(0);">Статьи</a>
@@ -54,32 +59,32 @@
     <div class="header-content">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 hidden-sm-down">
             <p class="construction construction_poz">
               Дом под ключ
               <span class="construction__bold">за 463 000!</span>
             </p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-xs-4">
             <div class="logo-box">
               <a class="logo both" href="javascript: void(0);">
                 <img class="left" src="images/logo-img.png" alt="logo">
-                <span class="logo__text">
+                <span class="logo__text hidden-sm-down">
                   <span class="logo__name">LenWood</span>
                   пиломатериалы
                 </span>
               </a>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-xs-8">
             <ul class="working-hours">
               <li class="working-hours__item">
                 <span class="working-hours__phone">(812) 389-36-20</span>
               </li>
-              <li class="working-hours__item">
+              <li class="working-hours__item hidden-sm-down">
                 Пн— Пт: 9:00 – 18:00
               </li>
-              <li class="working-hours__item">
+              <li class="working-hours__item hidden-sm-down">
                 Сб: 9:00 – 15:00, Вс: выходной
               </li>
             </ul>

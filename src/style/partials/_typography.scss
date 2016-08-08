@@ -65,6 +65,12 @@ a{
   }
 }
 
+.link{
+  color: #627e2f;
+  &_red{
+    color: #ff0606;
+  }
+}
 
 .left{
   float: left;
