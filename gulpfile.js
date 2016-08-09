@@ -66,19 +66,25 @@ gulp.task('bower', function(){
       .pipe(gulp.dest(path.build.bower_js));
   // responsive-menu
   gulp.src('./bower_components/jquery-responsive-menu/dist/js/*.*')
-  .pipe(gulp.dest('src/js/responsive-menu/'))
-  .pipe(gulp.dest('build/js/responsive-menu/'))
+    .pipe(gulp.dest('src/js/responsive-menu/'))
+    .pipe(gulp.dest('build/js/responsive-menu/'))
   gulp.src('./bower_components/jquery-responsive-menu/dist/css/*.*')
-  .pipe(gulp.dest('src/js/responsive-menu/'))
-  .pipe(gulp.dest('build/js/responsive-menu/'));
+    .pipe(gulp.dest('src/js/responsive-menu/'))
+    .pipe(gulp.dest('build/js/responsive-menu/'));
   // form-styler
   gulp.src('./bower_components/jquery-form-styler/*.css')
-      .pipe(gulp.dest('src/js/jquery-form-styler/'))
-      .pipe(gulp.dest('build/js/jquery-form-styler/'));
-      gulp.src('./bower_components/jquery-form-styler/*.js')
-          .pipe(gulp.dest('src/js/jquery-form-styler/'))
-          .pipe(gulp.dest('build/js/jquery-form-styler/'));
-
+    .pipe(gulp.dest('src/js/jquery-form-styler/'))
+    .pipe(gulp.dest('build/js/jquery-form-styler/'));
+  gulp.src('./bower_components/jquery-form-styler/*.js')
+    .pipe(gulp.dest('src/js/jquery-form-styler/'))
+    .pipe(gulp.dest('build/js/jquery-form-styler/'));
+  // custom-scrollbar
+  gulp.src('./bower_components/malihu-custom-scrollbar-plugin/*.css')
+    .pipe(gulp.dest('src/js/malihu-custom-scrollbar-plugin/'))
+    .pipe(gulp.dest('build/js/malihu-custom-scrollbar-plugin/'));
+  gulp.src('./bower_components/malihu-custom-scrollbar-plugin/*.js')
+    .pipe(gulp.dest('src/js/malihu-custom-scrollbar-plugin/'))
+    .pipe(gulp.dest('build/js/malihu-custom-scrollbar-plugin/'));
 
 });
 

@@ -64,6 +64,26 @@
     margin: 0;
   }
 
+  .calculator-form{
+    max-width: 640px;
+    margin: 0 auto;
+    &__input {
+        width: 80px;
+    }
+    &__lab{
+      width: 80px;
+      margin-bottom: 10px;
+    }
+    &__bc{
+      text-align: center;
+      display: block;
+    }
+  }
+  .next-ico {
+    margin: 0 14px;
+  }
+
+
 }
 
 @media screen and (max-width: 991px) {
@@ -292,6 +312,19 @@ h3 {
   font-size: rem(16);
 }
 
+.calculator-form{
+  max-width: 260px;
+  &__bc{
+    padding: 10px 0;
+  }
+  &__lab {
+    width: 100px;
+  }
+  &__input{
+    width: 100%;
+  }
+}
+
 
 
 
@@ -312,6 +345,9 @@ h3 {
       width: 100%;
 
     }
+  }
+  .table {
+    width: 500px;
   }
 
 

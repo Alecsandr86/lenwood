@@ -24,7 +24,18 @@ $(document).ready(function(){
 
     setTimeout(function() {
       $('select').styler();
-    }, 100)
+    }, 100);
+
+    $(window).on("load",function(){
+        
+        $('.wr-table').mCustomScrollbar({
+					axis:"x",
+					theme:"dark-thin",
+					autoExpandScrollbar:true,
+					advanced:{autoExpandHorizontalScroll:true}
+				});
+    });
+
 
 
 
