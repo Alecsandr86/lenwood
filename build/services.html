@@ -10,6 +10,27 @@
     <link href='https://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
+    <style>
+        .loader-box{
+            position :fixed;
+            top :0;
+            left :0;
+            right :0;
+            bottom :0;
+            width :100%;
+            background-color :#fff;
+            z-index :9999;
+        }
+        .loader{
+            position :absolute;
+            top :50%;
+            left :50%;
+            margin :-32px 0 0 -32px;
+            fill:#718e36;
+        }
+    </style>
+    <link rel="stylesheet" href="js/jquery-form-styler/jquery.formstyler.css">
+    <link rel="stylesheet" href="js/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -21,7 +42,13 @@
     <![endif]-->
 
 </head>
+
 <body>
+
+  <div class="loader-box">
+      <img class="loader" src="images/loading-spinning-bubbles.svg" alt="loader">
+  </div>
+
   <header class="header">
     <div class="nav-bg">
       <div class="container">
@@ -41,7 +68,7 @@
               <a class="nav-top__link" href="javascript: void(0);">Цены</a>
             </li>
             <li class="nav-top__item">
-              <a class="nav-top__link" href="javascript: void(0);">Новости</a>
+              <a class="nav-top__link nav-top__link-active" href="javascript: void(0);">Новости</a>
             </li>
             <li class="nav-top__item">
               <a class="nav-top__link" href="javascript: void(0);">Статьи</a>
@@ -59,10 +86,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 hidden-sm-down">
-            <p class="construction construction_poz">
+            <a href="javascript: void(0);" class="construction construction_poz">
               Дом под ключ
               <span class="construction__bold">за 463 000!</span>
-            </p>
+            </a>
           </div>
           <div class="col-md-4 col-xs-4">
             <div class="logo-box">
@@ -163,77 +190,114 @@
 
 
 
-<div class="contacts">
+<div class="services">
 
   <div class="box-description">
-    <h2 class="h-bot_line">Контакты</h2>
-    <p class="box-description__text">
-      ООО «ЛенВуд».  Склад в Санкт-Петербурге.
-    </p>
+    <h1 class="h-bot_line">Услуги</h1>
   </div>
 
   <div class="contacts-box">
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-5">
+        <div class="col-lg-12">
           <div class="contact-details">
 
             <div class="contact-details__item details-item">
-              <h4 class="details-item__h">Наш адрес </h4>
-              <div class="details-item__text">
-                <p>СПб, наб. Октябрьская, 112к4</p>
-              </div>
-            </div>
-
-            <div class="contact-details__item details-item">
-              <h4 class="details-item__h">Отдел продаж:</h4>
-              <div class="details-item__text">
-                <ul>
-                  <li>+7 (812) 389-28-29</li>
-                  <li>Email: <a class="details-item__link-mail"href="javascript: void(0);">info@lenwood.ru</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="contact-details__item details-item">
-              <h4 class="details-item__h">Часы работы:</h4>
-              <div class="details-item__text">
-                <ul>
-                  <li>Понедельник — Пятница :  С 9:00 до 18:00</li>
-                  <li>Суббота :   С 9:00 до 15:00</li>
-                  <li>Воскресенье : выходной</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="contact-details__item details-item">
-              <h4 class="details-item__h">До нас можно добраться на маршрутках:</h4>
+              <h4 class="details-item__h">Распил доски</h4>
               <div class="details-item__text">
                 <p>
-                  от метро «Ломоносовская» — К119, К476, К692 <br>
-                  от метро «Улица Дыбенко» — К 385 <br>
-                  Остановка «Уткина Заводь»
+                  При условии одного пропила на каждую доску стоимость распила = 200 руб за м3 <br>
+                  Два пропила = 300 руб за м3
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-details__item details-item">
+              <h4 class="details-item__h">Антисептирование</h4>
+              <div class="details-item__text">
+                <p>
+                  Процесс обработки древесины специальным защитным средством,
+                   которое препятствует развитию в древесине биологических
+                   разрушителей. По желанию заказчика возможна обработка как
+                    биозащитным раствором, так и огнебиозащитным.
+                </p>
+                <p>
+                  Стоимость обработки:
                 </p>
               </div>
             </div>
 
           </div>
-        </div>
-        <div class="col-lg-7">
-          <div class="contact-map">
-              <img src="images/contact-map.jpg" alt="img">
+
+          <div class="wr-table m_lr">
+              <table class="table">
+                <thead class="table__head">
+                  <tr class="table__tr table__tr_bg-2">
+                    <th class="table__th" rowspan="2">Толщина мм.</th>
+                    <th class="table__th" rowspan="2">Ширина</th>
+                    <th class="table__th" colspan="2">
+                      Стоимость обработки руб/м3
+                      (антисептик + работа)
+                    </th>
+                  </tr>
+                  <tr class="table__tr table__tr_bg-2">
+                    <th class="table__th">
+                      Биозащита до 30 лет
+                    </th>
+                    <th class="table__th">
+                      Огнебиозащита
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="table__body">
+                  <tr class="table__tr">
+                    <td class="table__td">25</td>
+                    <td class="table__td">100, 125, 150</td>
+                    <td class="table__td">2000</td>
+                    <td class="table__td">2000</td>
+                  </tr>
+
+                  <tr class="table__tr">
+                    <td class="table__td">40</td>
+                    <td class="table__td">100, 125, 150, 200</td>
+                    <td class="table__td">1800</td>
+                    <td class="table__td">2000</td>
+                  </tr>
+
+                  <tr class="table__tr">
+                    <td class="table__td">50</td>
+                    <td class="table__td">40, 50</td>
+                    <td class="table__td">2000</td>
+                    <td class="table__td">2200</td>
+                  </tr>
+
+                  <tr class="table__tr">
+                    <td class="table__td">50</td>
+                    <td class="table__td">100, 125, 150, 200</td>
+                    <td class="table__td">1800</td>
+                    <td class="table__td">2000</td>
+                  </tr>
+
+                  <tr class="table__tr">
+                    <td class="table__td">100, 150, 200</td>
+                    <td class="table__td">100, 150, 200</td>
+                    <td class="table__td">1800</td>
+                    <td class="table__td">2000</td>
+                  </tr>
+
+                </tbody>
+              </table>
           </div>
+
         </div>
+
       </div>
     </div>
 
   </div>
 </div>
 
-<div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15991.992561159772!2d30.3119556!3d59.9321576!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696378cc74a65ed%3A0x6dc7673fab848eff!2z0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjw!5e0!3m2!1sru!2sua!4v1459665625871" width="100%" height="374" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
 
 <div class="call-back">
   <div class="container">
@@ -257,7 +321,7 @@
             <div class="footer-address__item">
               <i class="footer-ico-1 footer-ico-poz"></i>
                 <h5>Адрес</h5>
-                <p class="hidden-sm-down">
+                <p class="hidden-my">
                   Санкт-Петербург <br>
                   наб. Октябрьская, 112к4
                 </p>
@@ -266,7 +330,7 @@
             <div class="footer-address__item">
                 <i class="footer-ico-2 footer-ico-poz"></i>
                 <h5>Отдел продаж</h5>
-                <ul class="hidden-sm-down">
+                <ul class="hidden-my">
                   <li>Телефон: +7 (812) 389-36-20</li>
                   <li>Email: info@lenwood.ru</li>
                 </ul>
@@ -275,7 +339,7 @@
             <div class="footer-address__item">
               <i class="footer-ico-3 footer-ico-poz"></i>
                 <h5>Время работы</h5>
-                <ul class="hidden-sm-down">
+                <ul class="hidden-my">
                   <li>Пн— Пт: 9:00 – 18:00</li>
                   <li>Сб: 9:00 – 15:00, Вс: выходной</li>
                 </ul>
@@ -297,6 +361,8 @@
   </footer>
   <script src="js/jquery.min.js"></script>
   <script src="js/responsive-menu/responsive-menu.min.js"></script>
+  <script src="js/jquery-form-styler/jquery.formstyler.min.js"></script>
+  <script src="js/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
   <script src="js/script.js"></script>
 
 </body>

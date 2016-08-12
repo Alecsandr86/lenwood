@@ -10,6 +10,26 @@
     <link href='https://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
+    <style>
+        .loader-box{
+            position :fixed;
+            top :0;
+            left :0;
+            right :0;
+            bottom :0;
+            width :100%;
+            background-color :#fff;
+            z-index :9999;
+        }
+        .loader{
+            position :absolute;
+            top :50%;
+            left :50%;
+            margin :-32px 0 0 -32px;
+            fill:#718e36;
+        }
+    </style>
+
     <link rel="stylesheet" href="js/jquery-form-styler/jquery.formstyler.css">
     <link rel="stylesheet" href="js/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/style.css">
@@ -23,7 +43,13 @@
     <![endif]-->
 
 </head>
+
 <body>
+
+  <div class="loader-box">
+      <img class="loader" src="images/loading-spinning-bubbles.svg" alt="loader">
+  </div>
+
   <header class="header">
     <div class="nav-bg">
       <div class="container">
@@ -61,10 +87,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 hidden-sm-down">
-            <p class="construction construction_poz">
+            <a href="javascript: void(0);" class="construction construction_poz">
               Дом под ключ
               <span class="construction__bold">за 463 000!</span>
-            </p>
+            </a>
           </div>
           <div class="col-md-4 col-xs-4">
             <div class="logo-box">

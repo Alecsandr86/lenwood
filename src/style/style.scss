@@ -48,6 +48,8 @@ body {
   font-size: rem(14);
   color: #cfe6a1;
   padding: 16px 0 0 58px;
+  display: inline-block;
+  text-decoration: none;
   &_poz{
     margin: 5px 0 0 -16px;
   }
@@ -175,6 +177,7 @@ body {
   position: relative;
   padding: 38px 0;
   text-align: center;
+  font-size: rem(30);
   &:before{
     content: '';
     width: 230px;
@@ -453,15 +456,19 @@ body {
   border-radius: 3px;
   box-shadow: 0.3px 4px 0 #718e36;
   margin: 16px 0;
+  display: block;
+  text-decoration: none;
   &__img{
     width: 30%;
     margin: 0 0 -2px;
+    display: inline-block;
   }
   &__text{
     width: 70%;
     color: #fff;
     vertical-align: middle;
     padding: 28px 20px 10px;
+    display: inline-block;
   }
   &__link{
     display: inline-block;
@@ -682,7 +689,7 @@ body {
   }
   &__th{
     padding: 16px 0;
-
+    vertical-align: middle;
   }
   &__td{
     text-align: center;
@@ -700,20 +707,96 @@ body {
   }
 }
 
+.services{
+  padding: 8px 0;
+}
+
+.shpunt{
+  padding: 8px 0;
+}
+
+.img-text{
+  &_poz{
+    padding: 56px 0 23px;
+  }
+  &__img{
+    width: 17%;
+  }
+  &__text{
+    width: 83%;
+    line-height: 24px;
+    p{
+      padding: 0 0 10px;
+    }
+  }
+  &__btn{
+    text-align: center;
+    padding: 27px 0;
+  }
+}
+
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: rem(18);
+  width: 370px;
+  height: 56px;
+  line-height: 54px;
+  background-color: #5e7a2f;
+  background-image: linear-gradient(to top, #405c1d 0%, #718e36 100%);
+  border: 1px solid #80a738;
+  border-radius: 5px;
+  box-shadow: 0.3px 4px 0 #718e36, inset 0 0 16px rgba(130, 153, 89, 0.62);
+  transition: all 0.3s ease;
+  &:hover{
+    background-color: #718e36;
+    background-image: linear-gradient(to top, #718e36 0%,  #405c1d  100%);
+  }
+
+}
+
+.advantages{
+
+}
+
+.advan{
+  &__h{
+    font-size: rem(15);
+    color: #70a224;
+    font-weight: bold;
+    padding: 17px 0;
+  }
+  &__text{
+    line-height: 24px;
+    p{
+      padding: 0 0 10px;
+    }
+  }
+}
 
 
+.hov-to{
+  padding: 8px 0;
+  &__text{
+    line-height: 24px;
+    padding: 16px 0 11px;
+    p{
+      padding: 5px 0;
+    }
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.hovto-img-text{
+  padding: 10px 0 41px;
+  &__img{
+    width: 9%;
+  }
+  &__text{
+    width: 91%;
+    line-height: 24px;
+  }
+}
 
 
 

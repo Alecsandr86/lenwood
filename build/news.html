@@ -10,6 +10,25 @@
     <link href='https://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
+    <style>
+        .loader-box{
+            position :fixed;
+            top :0;
+            left :0;
+            right :0;
+            bottom :0;
+            width :100%;
+            background-color :#fff;
+            z-index :9999;
+        }
+        .loader{
+            position :absolute;
+            top :50%;
+            left :50%;
+            margin :-32px 0 0 -32px;
+            fill:#718e36;
+        }
+    </style>
     <link rel="stylesheet" href="js/jquery-form-styler/jquery.formstyler.css">
     <link rel="stylesheet" href="js/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/style.css">
@@ -23,7 +42,13 @@
     <![endif]-->
 
 </head>
+
 <body>
+
+  <div class="loader-box">
+      <img class="loader" src="images/loading-spinning-bubbles.svg" alt="loader">
+  </div>
+
   <header class="header">
     <div class="nav-bg">
       <div class="container">
@@ -61,10 +86,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 hidden-sm-down">
-            <p class="construction construction_poz">
+            <a href="javascript: void(0);" class="construction construction_poz">
               Дом под ключ
               <span class="construction__bold">за 463 000!</span>
-            </p>
+            </a>
           </div>
           <div class="col-md-4 col-xs-4">
             <div class="logo-box">
@@ -168,7 +193,7 @@
 <div class="news-wr">
 
   <div class="box-description">
-    <h2 class="h-bot_line">Новости</h2>
+    <h1 class="h-bot_line">Новости</h1>
   </div>
   <div class="container">
     <div class="row">
@@ -352,7 +377,7 @@
             <div class="footer-address__item">
               <i class="footer-ico-1 footer-ico-poz"></i>
                 <h5>Адрес</h5>
-                <p class="hidden-sm-down">
+                <p class="hidden-my">
                   Санкт-Петербург <br>
                   наб. Октябрьская, 112к4
                 </p>
@@ -361,7 +386,7 @@
             <div class="footer-address__item">
                 <i class="footer-ico-2 footer-ico-poz"></i>
                 <h5>Отдел продаж</h5>
-                <ul class="hidden-sm-down">
+                <ul class="hidden-my">
                   <li>Телефон: +7 (812) 389-36-20</li>
                   <li>Email: info@lenwood.ru</li>
                 </ul>
@@ -370,7 +395,7 @@
             <div class="footer-address__item">
               <i class="footer-ico-3 footer-ico-poz"></i>
                 <h5>Время работы</h5>
-                <ul class="hidden-sm-down">
+                <ul class="hidden-my">
                   <li>Пн— Пт: 9:00 – 18:00</li>
                   <li>Сб: 9:00 – 15:00, Вс: выходной</li>
                 </ul>

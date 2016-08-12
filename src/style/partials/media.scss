@@ -83,6 +83,16 @@
     margin: 0 14px;
   }
 
+  .img-text{
+    &__img {
+      width: 20%;
+    }
+    &__text{
+      width: 80%;
+    }
+  }
+
+
 
 }
 
@@ -189,8 +199,24 @@
   margin: 0 ;
 }
 
+.img-text{
+  &__img {
+    img{
+      width: 100%;
+    }
+  }
+  &__text{
 
-
+  }
+}
+.hovto-img-text{
+  &__img {
+    width: 12%;
+  }
+  &__text{
+    width: 88%;
+  }
+}
 
 
 }
@@ -216,6 +242,7 @@
   .manufacturer-box {
     padding: 0 ;
   }
+  .h-bot_line,
   h2{
     font-size: rem(24);
   }
@@ -269,10 +296,18 @@
     width: 100%;
     text-align: center;
     border-bottom: 1px solid #e0e0e0;
-    padding: 15px 0;
+    padding: 15px 10px;
+    margin: 0;
     h5{
       display: inline-block;
       padding: 0;
+    }
+    &.active{
+      padding: 15px 10px 6px;
+      background-color: #e1e1e1;
+      h5{
+        padding: 0 0 15px;
+      }
     }
   }
 }
@@ -282,6 +317,16 @@
   left: auto;
   margin: 0 10px 0 0;
 }
+
+.hidden-my{
+  display: none;
+  padding: 10px 0;
+  background-color: #c8c8c8;
+  border-radius: 3px;
+}
+
+
+
 
 .footer{
   padding: 0;
@@ -313,12 +358,12 @@ h3 {
 }
 
 .calculator-form{
-  max-width: 260px;
+  max-width: 250px;
   &__bc{
     padding: 10px 0;
   }
   &__lab {
-    width: 100px;
+    width: 47%;
   }
   &__input{
     width: 100%;
@@ -326,7 +371,30 @@ h3 {
 }
 
 
-
+.img-text{
+  &__img {
+    width: 100%;
+    float: none;
+    img{
+      width: auto;
+    }
+  }
+  &__text{
+    width: 100%;
+    float: none;
+  }
+}
+.hovto-img-text{
+  &__img {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+  &__text{
+    width: 100%;
+    float: none;
+  }
+}
 
 
 }
@@ -350,5 +418,8 @@ h3 {
     width: 500px;
   }
 
+.btn{
+  width: 100%;
+}
 
 }

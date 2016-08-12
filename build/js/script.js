@@ -27,7 +27,7 @@ $(document).ready(function(){
     }, 100);
 
     $(window).on("load",function(){
-        
+
         $('.wr-table').mCustomScrollbar({
 					axis:"x",
 					theme:"dark-thin",
@@ -36,7 +36,24 @@ $(document).ready(function(){
 				});
     });
 
+    $('a[href^="#t"]').click(function(){
+         var target = $(this).attr('href');
+         $('html, body').animate({
+             scrollTop: $(target).offset().top},1000);
+         return false;
+     });
+
+     $('.footer-address__item').bind('click',function () {
+       $(this).toggleClass('active').find('.hidden-my').slideToggle();
+     });
 
 
+});
 
+
+$(function(){
+    $('.loader-box,.loader').fadeIn(10); //показывает фон и индикатор
+    $(window).load(function() {
+        $('.loader-box,.loader').fadeOut(1000); //скрывает, после загрузки страницы
+    });
 });
